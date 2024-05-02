@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3751222660583065180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5287, y: -4.9867, z: -0.06767648}
-  m_LocalScale: {x: 1.9469572, y: 1.7560436, z: 1}
+  m_LocalPosition: {x: 6.5287, y: -5.938, z: -0.06767648}
+  m_LocalScale: {x: 1.9469572, y: 2.552058, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8966585654426646670}
@@ -155,8 +155,8 @@ Transform:
   m_GameObject: {fileID: 6080833873320101626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.61, y: 3.3912, z: -0.06767648}
-  m_LocalScale: {x: 2.2019916, y: 2.2072718, z: 1}
+  m_LocalPosition: {x: 6.61, y: 4.2856, z: -0.06767648}
+  m_LocalScale: {x: 2.2019916, y: 2.9557576, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8966585654426646670}
@@ -266,6 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8966585654426646670}
+  - component: {fileID: 880218219187167549}
   m_Layer: 0
   m_Name: "Obst\xE1culo"
   m_TagString: Untagged
@@ -281,8 +282,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852570737537043897}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.12, y: 0.66, z: 0.06767648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.9399996, y: 0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -290,3 +291,15 @@ Transform:
   - {fileID: 5334089502203725873}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880218219187167549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852570737537043897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba71388eadfa7943f9dce8dcefcaeaa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

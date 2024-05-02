@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
+    private float velocidade = 5f;
+    private float variacaoDaPosicaoY = 1f;
+    
+    private void Awake()
+    {
+        this.transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
+    }
+
     // Start is called before the first frame update
     void Update()
     {
-    	print("go");
         this.transform.Translate(Vector3.left*0.1f);
     }
 
+    private void OnTriggerEnter2D(Collider2D outro)
+    {
+        GameObject.Destroy(this.gameObject);
+    }
 
 }

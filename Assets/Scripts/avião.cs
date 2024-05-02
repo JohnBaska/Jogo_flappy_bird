@@ -23,5 +23,9 @@ public class Aviao : MonoBehaviour
 	{
     	this.fisica.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
 	}
+
+	private void OnCollisionenter2D(Collision colisao){
+		this.fisica.simulated = false;
+	}
 }
 

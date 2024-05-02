@@ -10,7 +10,8 @@ public class Piso : MonoBehaviour
     
     void Awake (){
         this.posicaoInicial = this.transform.position;
-        this.tamanhoDAImagem = this.GetComponent<SpriteRenderer>().size.x;
+        this.tamanhoDaImagem = this.GetComponent<SpriteRenderer>().size.x;
+    }
     // Update is called once per frame
     void Update()
     {

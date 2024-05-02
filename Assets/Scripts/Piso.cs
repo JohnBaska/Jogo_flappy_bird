@@ -11,9 +11,12 @@ public class Piso : MonoBehaviour
     void Awake (){
         this.posicaoInicial = this.transform.position;
         this.tamanhoDAImagem = this.GetComponent<SpriteRenderer>().size.x;
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.left*this.velocidade);
+        float deslocamento = Mathf.Repeat(this.velocidade * Time.time, this.tamanhoRealDaImagem);
+        this.transform.position = this.posicaoInicial * Vector3left * deslocamento;
     }
 }

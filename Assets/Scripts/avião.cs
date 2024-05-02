@@ -5,8 +5,8 @@ using UnityEngine;
 public class Aviao : MonoBehaviour
 {
 	Rigidbody2D fisica;
-	[Serialize] private float forca = 6;
-	private Diretor diretor;
+	[SerializeField] private float forca = 6f;
+	//private Diretor diretor;
 	private Vector3 posicaoInicial;
 
 	void Awake()
@@ -17,7 +17,7 @@ public class Aviao : MonoBehaviour
 
 	private void Start()
     {
-        this.diretor = GameObject.FindObjectOfType<Diretor>();  // Coletar um objeto o qual está em outro objeto
+        // this.diretor = GameObject.FindObjectOfType<Diretor>();  // Coletar um objeto o qual está em outro objeto
     } 
 
 	// Update is called once per frame
@@ -37,13 +37,13 @@ public class Aviao : MonoBehaviour
 
 	private void OnCollisionenter2D(Collision colisao){
 		this.fisica.simulated = false;
-		this.diretor.FinalizarJogo();
+		//this.diretor.FinalizarJogo();
 	}
 
-	public void Reiniciar()
-    {
-        this.transform.position = this.posicaoInicial;
-        this.fisica.simulated = true;
-    }
+// 	public void Reiniciar()
+//     {
+//         this.transform.position = this.posicaoInicial;
+//         this.fisica.simulated = true;
+//     }
 }
 

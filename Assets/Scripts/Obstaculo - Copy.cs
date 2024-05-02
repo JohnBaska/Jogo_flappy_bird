@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
-    private float velocidade = 5f;
+    private float velocidade = 0.1f;
     private float variacaoDaPosicaoY = 1f;
     
     private void Awake()
@@ -15,7 +15,7 @@ public class Obstaculo : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        this.transform.Translate(Vector3.left*0.1f);
+        this.transform.Translate(Vector3.left*velocidade);
     }
 
     private void OnTriggerEnter2D(Collider2D outro)

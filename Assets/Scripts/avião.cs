@@ -6,27 +6,28 @@ public class Aviao : MonoBehaviour
 {
 	Rigidbody2D fisica;
 	[SerializeField] private float forca = 6f;
-	//private Diretor diretor;
 	private Vector3 posicaoInicial;
+	private Diretor diretor;
 
 	void Awake()
 	{
 		this.posicaoInicial = this.transform.position;
     	this.fisica = this.GetComponent<Rigidbody2D>();
-	}
+	}	 
 
 	private void Start()
-    {
-        // this.diretor = GameObject.FindObjectOfType<Diretor>();  // Coletar um objeto o qual está em outro objeto
-    } 
+	{
+		this.diretor = GameObject.FindObjectOfType<Diretor>();
+		print(this.diretor);
+	}
 
 	// Update is called once per frame
 	void Update()
 	{
-    	if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
-    	{
-        	this.Impulsionar();
-    	}
+    		if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
+    		{
+        		this.Impulsionar();
+    		}
 	}
 
 	void Impulsionar()
@@ -35,15 +36,9 @@ public class Aviao : MonoBehaviour
     	this.fisica.AddForce(Vector2.up * this.forca, ForceMode2D.Impulse);
 	}
 
-	private void OnCollisionenter2D(Collision colisao){
+	private void OnCollisionEnter2D(Collision2D colisao){
 		this.fisica.simulated = false;
-		//this.diretor.FinalizarJogo();
+		print(this.diretor);
+		this.diretor.FinalizarJogo();
 	}
-
-// 	public void Reiniciar()
-//     {
-//         this.transform.position = this.posicaoInicial;
-//         this.fisica.simulated = true;
-//     }
 }
-

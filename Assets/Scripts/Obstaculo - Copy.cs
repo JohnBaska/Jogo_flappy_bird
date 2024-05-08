@@ -15,12 +15,14 @@ public class Obstaculo : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        this.transform.Translate(Vector3.left*velocidade);
+        this.transform.Translate(Vector3.left * this.velocidade * Time.timeScale);
     }
 
     private void OnTriggerEnter2D(Collider2D outro)
     {
         GameObject.Destroy(this.gameObject);
     }
+
+
 
 }

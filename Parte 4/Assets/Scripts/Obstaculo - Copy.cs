@@ -18,11 +18,12 @@ public class Obstaculo : MonoBehaviour
         this.transform.Translate(Vector3.left * this.velocidade * Time.timeScale);
     }
 
-    private void OnTriggerEnter2D(Collider2D outro)
-    {
+    private void OnTriggerEnter2D(Collider2D outro){
+        print ("colidiu");
+        this.Destruir();
+    }
+    
+    private void Destruir(){
         GameObject.Destroy(this.gameObject);
     }
-
-
-
 }

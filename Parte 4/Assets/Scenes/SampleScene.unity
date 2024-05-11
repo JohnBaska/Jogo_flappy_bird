@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoParaGerar: 3
-  obstaculo: {fileID: 0}
+  obstaculo: {fileID: 6663095599341821598, guid: ab8d0b6fb643ad50d99345675853ae8b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
